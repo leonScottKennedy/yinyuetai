@@ -1,0 +1,411 @@
+@rem: 67.5rem;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd {
+    margin: 0;
+    font-size: .6rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+input {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    /*模拟固定定位，给body加相对定位，页面外框不定位，里面的内容绝对定位*/
+}
+
+
+/*页面外框*/
+
+.wrap {
+    height: 100%;
+    background: #efefef;
+    overflow: hidden;
+}
+
+
+/*头部*/
+
+#header {
+    height: 134/@rem;
+    background: #0f1410;
+    position: relative;
+    z-index: 1;
+}
+
+#logo {
+    width: 202/@rem;
+    height: 100/@rem;
+    padding-top: 34/@rem;
+    padding-left: 17/@rem;
+    padding-right: 41/@rem;
+    float: left;
+}
+
+#logo a {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url(../images/logo.png) no-repeat;
+    background-size: contain;
+}
+
+.channel_btn {
+    width: 81/@rem;
+    height: 100%;
+    float: left;
+}
+
+.on {
+    background: url(../images/channel_ice.png) no-repeat;
+    background-size: cover;
+    background-position: 0 14/@rem;
+}
+
+.off {
+    background: url(../images/channel_ice.png) no-repeat;
+    background-size: cover;
+    background-position: 0 -110/@rem;
+}
+
+.top_btns {
+    height: 114/@rem;
+    padding-top: 20/@rem;
+    padding-right: 20/@rem;
+    float: right;
+}
+
+.top_btns a {
+    display: inline-block;
+    background: #669b00;
+    width: 111/@rem;
+    height: 78/@rem;
+    border-radius: 12/@rem;
+    color: #fff;
+    text-align: center;
+    line-height: 78/@rem;
+}
+
+.channel_pannel {
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40/@rem 0;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    left: 0;
+    top: 138/@rem;
+    border-top: 1/@rem solid #fff;
+}
+
+.channel_pannel li {
+    float: left;
+}
+
+.channel_pannel li a {
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    width: 220/@rem;
+    height: 94/@rem;
+    line-height: 94/@rem;
+    text-align: center;
+    padding: 20/@rem;
+}
+
+
+/*页面整体内容*/
+
+#main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 134/@rem;
+}
+
+
+/*滑动内容区域*/
+
+#minScroll {
+    min-height: 100%;
+}
+
+
+/*表单*/
+
+#search {
+    box-sizing: border-box;
+    height: 135/@rem;
+    padding: 16/@rem;
+    background: #0f1410;
+}
+
+#search input {
+    border: none;
+    outline: none;
+    height: 102/@rem;
+    line-height: 102/@rem;
+}
+
+#search input[type="search"] {
+    box-sizing: border-box;
+    width: 828/@rem;
+    padding-left: 18/@rem;
+    float: left;
+    font-size: 39/@rem;
+    background: #9e999f;
+    color: #323033;
+    border-radius: 20/@rem 0 0 20/@rem;
+}
+
+#search input[type="search"]::-webkit-input-placeholder {
+    color: #000;
+}
+
+#search input[type="search"]:focus {
+    background: #fff;
+    color: #333;
+}
+
+#search input[type="submit"] {
+    width: 202/@rem;
+    float: right;
+    font-size: 50/@rem;
+    background: #414141;
+    color: #fff;
+    border-radius: 0 20/@rem 20/@rem 0;
+}
+
+
+/*导航条*/
+
+#navBar {
+    box-sizing: border-box;
+    padding-top: 32/@rem;
+    padding-bottom: 15/@rem;
+    height: 168/@rem;
+    border-bottom: 1px solid #cad1ca;
+    overflow: hidden;
+}
+
+#navBar ul {
+    font-size: 0;
+    white-space: nowrap;
+    /*强行不换行*/
+    li {
+        display: inline-block;
+    }
+    a {
+        display: inline-block;
+        padding: 0 38/@rem;
+        font-size: 60/@rem;
+        line-height: 116/@rem;
+        color: #000;
+    }
+}
+
+#navBar li a.selected {
+    background: #639a00;
+    color: #fff;
+}
+
+
+/*轮播图*/
+
+#focus_wrapper {
+    width: 100%;
+    height: 624/@rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.swipe-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.swipe-wrap li {
+    float: left;
+}
+
+.swipe-wrap img {
+    width: 100%;
+    height: 100%;
+}
+
+#position {
+    position: absolute;
+    right: 86/@rem;
+    bottom: 34/@rem;
+}
+
+#position li {
+    float: left;
+    width: 36/@rem;
+    height: 36/@rem;
+    margin: 0 17/@rem;
+    border-radius: 18/@rem;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#position li.cur {
+    background: #9ec72b;
+}
+
+
+/*MV*/
+
+#MV {
+    width: 1048/@rem;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.header {
+    box-sizing: border-box;
+    padding: 0 20/@rem;
+    height: 114/@rem;
+    line-height: 114/@rem;
+    background: #fff;
+}
+
+.header h2 {
+    float: left;
+    font-size: 50/@rem;
+    color: #000;
+}
+
+.header a {
+    float: right;
+    font-size: 40/@rem;
+    color: #444;
+}
+
+#mvNav {
+    padding-left: 20/@rem;
+}
+
+#mvNav ul {
+    overflow: hidden;
+}
+
+#mvNav li {
+    padding: 14/@rem 15/@rem;
+    float: left;
+    font-size: 44/@rem;
+    color: #5a5a5a;
+}
+
+#mvNav li.cur {
+	border-bottom: 2px solid #749d00;
+}
+
+.MVTab {
+	padding: 9/@rem;
+	margin-top: 9/@rem;
+	margin-bottom: 7/@rem;
+}
+
+.MVTab ul {
+	overflow: hidden;
+}
+
+.MVTab li {
+	box-sizing: border-box;
+	width: 506/@rem;
+	padding: 6/@rem 7/@rem;
+	background: #efefef;
+	margin-bottom: 18/@rem;
+	float: left;
+}
+
+.MVTab li:nth-child(odd) {
+	margin-right: 9/@rem;
+}
+
+.MVTab li:nth-child(even) {
+	margin-left: 9/@rem;
+}
+
+.MVTab li img {
+	width: 492/@rem;
+	height: 284/@rem;
+}
+
+.MVTab h2 {
+	box-sizing: border-box;
+	width: 100%;
+	height: 76/@rem;
+	line-height: 76/@rem;
+	padding: 0 16/@rem;
+	font-size: 38/@rem;
+	overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+}
+
+.MVTab .info {
+	overflow: hidden;
+}
+
+.MVTab .info p {
+	line-height: 66/@rem;
+	padding-left: 70/@rem;
+	float: left;
+}
+
+.MVTab .info p.play {
+	display: inline-block;
+	box-sizing: border-box;
+	background: url(../images/mobile_index_ice.png) no-repeat;
+	background-position: 12/@rem 9/@rem;
+}
+
+.MVTab .info p.comment {
+	display: inline-block;
+	box-sizing: border-box;
+	background: url(../images/mobile_index_ice.png) no-repeat;
+	background-position: 12/@rem -56/@rem;
+}
+
+.MVTab .info p span.commentbg {
+	background: url(../images/mobile_index_ice.png) no-repeat 0 -66/@rem;
+}
